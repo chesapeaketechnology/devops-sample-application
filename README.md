@@ -29,10 +29,10 @@ WebSockets?
 
 ## Setting up locally
 
-1. Get [RVM](http://rvm.io/rvm/install)
-2. Using RVM, install Ruby 2.6.5 `rvm install 2.6.5`
-3. Run `bundle install`
-4. Get Postgres 9.6 or newer
+1. Get [RVM](https://rvm.io/rvm/install)
+2. Using RVM, install Ruby 2.7.7 `rvm install 2.7.7`
+3. Get [Postgres 14 or newer](https://www.postgresql.org/download/)
+4. Run `bundle install`
 5. Create a database locally called `gifmachine` (you can run: `bundle exec rake db:create`)
 6. Set your RACK_ENV (e.g. `export RACK_ENV='development'`)
 7. `bundle exec rake db:migrate` to load the database schema into the database
@@ -45,7 +45,7 @@ WebSockets?
 Using `curl` you can post a gif and some text to register it in the `gifmachine`
 
 ```bash
-curl --data 'url=http://www.example.com/somegif.gif&who=thatAmazingPerson&meme_top=herp&meme_bottom=derp&secret=yourSuperSecretPasswordFromAppRb' 'http://yourGifMachineUrl/gif'
+curl --data 'url=<http://www.example.com/somegif.gif>&who=thatAmazingPerson&meme_top=herp&meme_bottom=derp&secret=<your-GIFMACHINE_PASSWORD>' 'http://<yourGifMachineUrl>/gif'
 ```
 
 ## Configuring for Production
